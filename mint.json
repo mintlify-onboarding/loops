@@ -59,6 +59,17 @@
         "deliverability/gaining-insights",
         "deliverability/understanding-email-open-rates"
       ]
+    },
+    {
+      "group": "Add Users",
+      "pages": [
+        "add-users/csv-upload",
+        "add-users/integrations",
+        "add-users/api-reference",
+        "add-users/zapier",
+        "add-users/segment",
+        "add-users/properties"
+      ]
     }
   ],
   "footerSocials": {
