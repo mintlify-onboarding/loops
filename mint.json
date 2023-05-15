@@ -49,6 +49,16 @@
         "creating-emails/triggering-emails",
         "creating-emails/font-support"
       ]
+    },
+    {
+      "group": "Deliverability",
+      "pages": [
+        "deliverability/setting-domain",
+        "deliverability/optimization",
+        "deliverability/sending-from-subdomain",
+        "deliverability/gaining-insights",
+        "deliverability/understanding-email-open-rates"
+      ]
     }
   ],
   "footerSocials": {
