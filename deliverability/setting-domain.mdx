@@ -54,3 +54,36 @@ A few things to keep in mind:
   ![](/images/google-domains.png)
   - Google domains will also include quotes “ “ around some record names. This is expected and will not impact anything.
 </Accordion>
+
+Last but easy to miss:
+
+<Tip>
+  Make sure you enter the “Priority” while setting up your MX record. In most registrars this is done by formatting it like “10 {pastedrecordname}”. 
+  
+  Occasionally you will be asked to place it on a separate line. Just make sure to read the instructions on the page as you set up your MX record and if you have any questions, just ping adam@loops.so
+</Tip>
+
+## ### Step 4: Verify your records are set up correctly
+
+After you have copied and pasted your records into your domain registrar, you can click “Verify Records” at the bottom of the page to check your server. 
+
+<Tip>Sometimes records can take up to an hour to propagate across all the servers. During that time you may see different records validate. This is totally normal, just check back later.</Tip>
+
+If the domain is set up correctly, you should get a screenshot like the one below! If not, check back soon, sometimes records can take up to 20 minutes to propagate.
+
+Notice the “Verified” in green next to each record section.
+
+![](/images/verified.png)
+
+### Still have questions?
+
+Here are a few guides to add records for:
+
+- [Namecheap](https://www.namecheap.com/support/knowledgebase/article.aspx/434/2237/how-do-i-set-up-host-records-for-a-domain/)
+- [Google Domains](https://support.google.com/domains/answer/3290350?hl=en#zippy=)
+- [Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/migrate-dns-domain-in-use.html#migrate-dns-create-records)
+- [GoDaddy](https://www.godaddy.com/help/manage-dns-records-680)
+- [Cloudflare](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/#create-dns-records)
+- Dreamhost is currently unsupported in full due to their lack of ability in adding custom MX records.
+
+<Tip>Still confused? Just shoot us an [email](mailto:adam@loops.so) 🙂</Tip>
