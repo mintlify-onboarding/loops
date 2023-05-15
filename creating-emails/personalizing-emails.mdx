@@ -1,0 +1,64 @@
+---
+title: "Personalizing your emails with merge tags "
+---
+
+Merge tags are a great way to add context and personalization to emails. They allow you to include user attributes such as their first name in your emails. To add a merge tag, simply select the merge tag icon in the toolbar of the email editor. When the email is sent, the first name of the user will be added in the appropriate place.
+
+You can also use merge tags to add custom user data attributes to your email. If you sync user data to the platform, you can include that data as a merge tag in your email. It's important to note that users who do not have the appropriate merge tag or a fallback variable will not receive the email.
+
+### A basic merge tag - personalizing an email with First Names
+
+Merge tags help you take your user’s attributes and add them in context to an email. A common way of using them is to personalize an email greeting by a user’s first name. To accomplish this, select the merge tag icon in the toolbar of the email editor like so 👇
+
+![](/images/basic-merge.png)
+
+When the email is sent, it will show the first name for the user:
+`“Hey Chris,”`
+
+But it will appear like this in the editor:
+
+![](/images/editor-appear.png)
+
+### Custom merge tags
+
+Any user data attributes you sync with the platform either through the [API](https://www.notion.so/API-5b453a52dd7c4b419aa4647410de9770) or through [Zapier](https://www.notion.so/Zapier-d16e22c0e3eb44cdbd8033121e351ef7) you can include as a merge tag in your email to further personalize it.
+
+For example, say you wanted to create a rollup email with metrics about a user over the last week. You could sync those metrics to Loops as data attributes.
+
+The data attributes will automatically be available as merge tags and in your dropdown within the merge tag menu as pictured below:
+
+![](/images/merge-tag-menu.png)
+
+### Setting a fallback variable
+
+It is important to set a fallback variable for any custom merge tags you use. If a user does not have the appropriate merge tag, the fallback variable will be used instead.
+
+For example, if you set a fallback variable for “First Name” as “there”, then if a user does not have this data attribute, the email will include “there” in the place of the number of logins. This is a great way to make sure that your emails still make sense to users even if there is no data available.
+
+![](/images/fallback-variable.png)
+
+### No merge tag is available for the user
+
+If no merge tag is available for the user, then contacts without the matching merge tag will not be sent an email.
+
+For example, if you select “First Name” from the merge tag dropdown, but one of the users in your list doesn’t have a “First Name” in their contact information that has been synced with Loops, then they will not receive the email.
+
+<Tip>
+  Coming soon: the ability to get a list of all users that have not received an
+  email - in the meantime, please slack us a message or send us an email
+  directly (help@loops.so)
+</Tip>
+
+### Merge Tag syntax
+
+It’s not yet possible to add Merge Tags to buttons and links. While we build the UI for that, we recommend you use typed Merge Tags instead. For example, you could write {companyLink} in a button url to include a dynamic link that will personalize for users.
+
+![](/images/merge-tag.png)
+For a list of all possible merge tags, visit https://app.loops.so/settings?page=api. The API Name is the merge tag you would insert: {firstName}, {lastName}, {email}, etc.
+
+![](/images/merge-tag-2.png)
+
+<Tip>
+  It’s important to use camelCase format to type your merge tags, if you have
+  any questions about how to format your merge tags, reach out to us!
+</Tip>

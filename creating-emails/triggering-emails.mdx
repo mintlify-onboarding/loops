@@ -1,0 +1,56 @@
+---
+title: "Triggering Emails with the Loop Builder"
+---
+
+## Overview
+
+Use a Loop when you’d like to trigger an email based on an event that you trigger via our API, Zapier or Segment. You can also use a preset trigger like “User joins list” to trigger a Loop.
+
+## Getting Started
+
+To start building your Loop, select a template or start from scratch.
+
+![](/images/getting-started.png)
+
+Templates are added often and we’re always open to taking suggestions!
+
+## Building a Loop
+
+![](/images/building-loop.png)
+
+## Triggers
+
+![](/images/triggers.png)
+You have two options:
+
+- **Contact added**: Triggered whenever a contact has been added to your audience list. Only contacts who have been added via API, Zapier, or Segment will be added based on this Trigger. Contacts uploaded via CSV or added individually to the audience table will not be included.
+- **Event is fired**: Enter any custom event name to trigger an email based on interactions in your app. Common custom events are `sign-up`, `canceled` and `activated`.
+- **Contact updated:** Triggered whenever a contact property changes from one property to another. Can also conditionally trigger only if the previous property matches the inputted.
+
+## Timer
+
+![](/images/timer.png)
+
+A **Timer** adds a fixed duration between the trigger and the action. Select the “Immediately” option to bypass the timer or any increment of time to extend the duration of the Loop.
+
+## Audience Filters
+
+![](/images/audience-filters.png)
+
+By combining an audience filter with a loop trigger, you can create fine-tuned Loops to target specific users.
+
+For example, you can check in with users that have not signed up as a paying user 3 days after signing up by setting the Custom Event to `signup` the Timer duration to 3 days and the audience filter to `paid` equals `false`.
+
+By combining events, timers and the audience filter, you should be able to target users at any stage of the lifecycle.
+
+![](/images/target-users.png)
+
+## Metrics
+
+Click over to the “Metrics” tab to view simple metrics inline within the builder.
+
+![](/images/metrics.png)
+
+Click “View full metrics” to view detailed metrics for your Loop.
+
+![](/images/view-full-metrics.png)

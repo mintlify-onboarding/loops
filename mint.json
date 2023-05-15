@@ -39,6 +39,16 @@
     {
       "group": "Account",
       "pages": ["account/adding-team-member", "account/free-plan"]
+    },
+    {
+      "group": "Creating Emails",
+      "pages": [
+        "creating-emails/sending-first-email",
+        "creating-emails/uploading-custom-email",
+        "creating-emails/personalizing-emails",
+        "creating-emails/triggering-emails",
+        "creating-emails/font-support"
+      ]
     }
   ],
   "footerSocials": {
