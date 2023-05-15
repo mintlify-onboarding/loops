@@ -1,0 +1,57 @@
+---
+title: "Uploading a custom email to Loops with Emailify (or MJML)"
+---
+
+## Overview
+
+Sometimes you just want that special touch to an email that only Figma can give you. We get it! That’s why we support a free plugin, [Emailify](https://www.figma.com/community/plugin/910671699871076601/Emailify-HTML-Email-Builder), that helps you create a beautiful email in Figma then export it into Loops.
+
+Here’s how to do it.
+
+## Step 1
+
+Download the free Emailify plugin and launch it. You will see this screen first.
+
+![](/images/step1.png)
+
+## Step 2
+
+Add preset blocks and customize them! Emailify makes it really easy.
+
+![](/images/step2.png)
+
+## Step 3
+
+When you’re happy with the design, make these few changes to prep your email for Loops:
+
+1. Remove the “View link in browser” in the footer as Loops does not support that function (yet).
+   ![](/images/step3-1.png)
+2. Edit the “Unsubscribe” link to use the Loops merge tag `{unsubscribe_link}` - more info about merge tag usage is here: @Personalizing your emails with merge tags  
+   ![](/images/step3-2.png)
+
+<Note>
+  Loops will automatically download and host all of your email images so they
+  can be reliably displayed to your audience. This feature results in an odd
+  quirk that you should be aware of:
+
+  Any text in your email that matches the path to one of your images will be replaced with the new path provided by loops.
+
+  **For example:** `img/myImage.jpg`will be replaced with something like: `https://something.com/lkjn98s08hbAF/img/lkwekHBlhk78kasj.jpg`
+
+  For most situations this won’t be an issue, only text that exactly matches the path to one of your images will be replaced.
+</Note>
+
+## Step 4
+
+After you’ve completed the previous step (which is very important!), go ahead and hit Export
+
+![](/images/step4-1.png)
+
+Then click “HTML” and select “MJML” and click “Export to MJML”
+
+![](/images/step4-2.png)
+
+That’s it! Download your .zip file and you’re all set to upload to Loops.
+
+![](/images/step4-3.png)
+
