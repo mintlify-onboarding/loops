@@ -15,7 +15,7 @@ It’s also an easy way to integrate with tools like Webflow without having to u
 
 ## Using our endpoint with Webflow Forms
 
-1. First, you need to add a custom script on the page settings in the "Before </body> tag" section: [https://gist.github.com/askkaz/44ba29cf1898c60e3eb03903e63e2cc4](https://gist.github.com/askkaz/44ba29cf1898c60e3eb03903e63e2cc4)
+1. First, you need to add a custom script on the page settings in the "Before `</body`> tag" section: [https://gist.github.com/askkaz/44ba29cf1898c60e3eb03903e63e2cc4](https://gist.github.com/askkaz/44ba29cf1898c60e3eb03903e63e2cc4)
 2. In your webflow form settings, paste your form endpoint into the “Action” input
    ![](/images/webflow-forms.png)
 3. 1. Update the form text field settings so the “Name” matches the conventions for Loops: `email`, `firstName`, etc.
@@ -24,4 +24,15 @@ It’s also an easy way to integrate with tools like Webflow without having to u
 <Tip>
   Please make sure these contact properties already exist inside of Loops in
   your audience table. You can add new contact properties via CSV or by API.
+</Tip>
+
+![](/images/native-webflow.png)
+
+4. If you want to set a property for all contacts that submit the form, you can use an embed to insert a hidden field:
+
+![](/images/html-editor.png)
+
+<Tip>
+  Note: there is rate limiting, so you will get an error in testing if they
+  submit more than once per minute or submit the same email twice.
 </Tip>

@@ -79,6 +79,14 @@
         "forms/native-webflow",
         "forms/custom-form"
       ]
+    },
+    {
+      "group": "Transactional",
+      "pages": ["transactional/guide"]
+    },
+    {
+      "group": "Events",
+      "pages": ["events/events-page", "events/auto-bcc"]
     }
   ],
   "footerSocials": {

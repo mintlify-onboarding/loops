@@ -1,0 +1,103 @@
+---
+title: "Transactional Email Guide"
+description: "Transactional email support is a newly added feature to help you send infrastructure-level emails from Loops."
+---
+
+<Tip>
+    Transactional emails are automated, API-triggered emails that are sent to individual contacts based on a specific action they have taken.
+
+    Examples include confirmation emails, password reset emails, and purchase confirmations.
+
+</Tip>
+
+Unlike Campaigns or Loops, Transactional emails are not promotional in nature and as a result they do not require unsubscribe information to be included in the email.
+
+### How it works
+
+To send Transactional email, you will need to use our [API](https://www.notion.so/5b453a52dd7c4b419aa4647410de9770) (with more support for third-party integrations coming soon). Requests need to be authenticated using an API key as described [here](https://www.notion.so/5b453a52dd7c4b419aa4647410de9770).
+
+### Sending your first transactional email
+
+To get started, click “Create” followed by “Transactional”.
+
+<iframe src="https://res.cloudinary.com/mintlify/video/upload/v1684192725/transactional_f2wntg.mp4">
+  {" "}
+</iframe>
+
+Then you’ll compose the email you’d like to send in our builder.
+
+![](/images/email.png)
+
+In this email, a user clicks the Reset Password button to reset their information.
+
+The link in the button is filled in by the information in the data variable you send. We’re also sending the user’s name in through a data variable.
+
+<iframe src="https://res.cloudinary.com/mintlify/video/upload/v1684192725/transactional_f2wntg.mp4">
+  {" "}
+</iframe>
+
+Note that currently you can insert data variables into the text of the email with the “terminal prompt” button:
+
+![](/images/terminal.png)
+
+For image links and button links, you will be able to insert data variables with the inline version of the same button.
+
+![](/images/passwordresetlink.png)
+
+<iframe src="https://res.cloudinary.com/mintlify/video/upload/v1684193741/view-payload_yasybs.mp4">
+  {" "}
+</iframe>
+
+On the next page, after clicking “Next”, you’ll see the API Details section. This contains the data variables used in the email as well as a sample payload for reference. The “Transactional ID” lets you distinguish between different transactional emails when calling the API and is required.
+
+![](/images/next.png)
+
+### Publish the email
+
+To enable sending the email, it needs to be published by pressing “Publish”.
+
+### Send your email
+
+In the example above, two Data Variables were used in the email and there is a transactional ID needed as part of our API call. Any data variables created in the email are required when making the API request.
+
+Here’s an example of the request for sending this email:
+
+**Send a POST to this endpoint (make sure to authenticate)**
+
+```json
+https://app.loops.so/api/v1/transactional
+```
+
+**Payload**
+
+```json
+{
+  "transactionalId": "clfq6dinn000yl70fgwwyp82l",
+  "email": "favorite@example.com",
+  "dataVariables": {
+    "name": "Chris",
+    "passwordResetLink": "https://example.com/reset-password"
+  }
+}
+```
+
+### Editing the email
+
+To edit the email, press “Duplicate as Draft” on the Compose page:
+
+![](/image/duplicate.png)
+The previous version of the email will continue sending until you press “Republish” on the Publish page:
+
+![](/image/republish.png)
+That means you can edit Transactional emails while still sending your existing emails.
+
+### Metrics
+
+After emails are sent, details are shown in the metrics page.
+
+These include send time and if messages experienced any issues with delivery (bounces or spam complaints).
+
+<Tip>
+  Note that open and click tracking is disabled for transactional messages to
+  improve deliverability for infrastructure-level communications.
+</Tip>
