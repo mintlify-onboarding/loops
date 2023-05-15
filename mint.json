@@ -70,6 +70,15 @@
         "add-users/segment",
         "add-users/properties"
       ]
+    },
+    {
+      "group": "Forms",
+      "pages": [
+        "forms/framer",
+        "forms/loops-to-typedream",
+        "forms/native-webflow",
+        "forms/custom-form"
+      ]
     }
   ],
   "footerSocials": {

@@ -1,0 +1,27 @@
+---
+title: "Use native Webflow forms with Loops"
+---
+
+By integrating with our form endpoint you can use the existing form capabilities you already have implemented on your site, while still getting the advantage of some of our safeguards for form entry.
+
+It’s also an easy way to integrate with tools like Webflow without having to use our API.
+
+## Find the correct endpoint
+
+1. On the left hand side of the screen, select the “Forms” tab to navigate to the Forms page.
+2. You should see a code box on the right hand side of the screen
+   ![](/images/correct-endpoints.png)
+3. Your form endpoint is found in the line that starts `action="https://app.loops.so/api/` Copy the url and save it for later - it should look like `https://app.loops.so/api/newsletter-form/ckycn3429053809mg7fdrhpi7` (yours will be different at the end)
+
+## Using our endpoint with Webflow Forms
+
+1. First, you need to add a custom script on the page settings in the "Before </body> tag" section: [https://gist.github.com/askkaz/44ba29cf1898c60e3eb03903e63e2cc4](https://gist.github.com/askkaz/44ba29cf1898c60e3eb03903e63e2cc4)
+2. In your webflow form settings, paste your form endpoint into the “Action” input
+   ![](/images/webflow-forms.png)
+3. 1. Update the form text field settings so the “Name” matches the conventions for Loops: `email`, `firstName`, etc.
+   - If you’re unsure of the contact property, visit the [API Settings](https://app.loops.so/settings?page=api) page for an overview of all contact property.
+
+<Tip>
+  Please make sure these contact properties already exist inside of Loops in
+  your audience table. You can add new contact properties via CSV or by API.
+</Tip>

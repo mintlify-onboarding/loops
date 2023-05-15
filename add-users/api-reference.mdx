@@ -1,0 +1,107 @@
+---
+title: "API"
+---
+
+## REST API
+
+<Warning>
+  Your Loops API key should never be used client side or exposed to your end
+  users.
+</Warning>
+
+### Authentication
+
+To get started, you’ll need an API key. Visit the Loops settings page and click “Generate new key”:
+
+![](/images/authentication-1.png)
+This creates an API key. You can assign it a human-readable name:
+![](/images/authentication-2.png)
+We suggest using a different API key for different purposes. You can revoke an API key at any time with the trash icon.
+
+When making an API call, add an Authorization header and set the API key as a Bearer token:
+![](/images/authentication-3.png)
+
+You can test your API key by making a `GET` request to chris/loo-1683-clean-up-mobile-view-on-transactional. If successful, you will receive `{ "success": true }`
+
+As a Curl request (replace `d2d561f5ff80136f69b4b5a31b9fb3c9` with your own API key):
+
+```bash
+curl https://app.loops.so/api/v1/api-key -H "Accept: application/json" -H "Authorization: Bearer d2d561f5ff80136f69b4b5a31b9fb3c9"
+```
+
+## Contacts
+
+### Add
+
+You can add contacts to your Loops audience by making a `POST` to the `https://app.loops.so/api/v1/contacts/create` endpoint. You can submit the following object for the body:
+
+```json
+{
+  "email": "adam@loops.so",
+  "firstName": "Adam",
+  "lastName": "Kaczmarek",
+  "favoriteColor": "blue",
+  "userGroup": "Founders",
+  "source": "Signup form Service"
+}
+```
+
+### Update
+
+You can update contacts to your Loops audience by making a `PUT` to the `https://app.loops.so/api/v1/contacts/update` endpoint. You can submit the following object for the body:
+
+```json
+{
+  "email": "adam@loops.so",
+  "firstName": "Adam",
+  "lastName": "Kaczmarek",
+  "favoriteColor": "blue",
+  "userGroup": "Founders",
+  "source": "Signup form Service"
+}
+```
+
+The only required field is “email”. If there is no contact with this email, one will be created. You can add additional fields as you need for the contact (favoriteColor is not a standard field).
+
+### Find
+
+You can search your existing contacts by email using a `GET` request to the `https://app.loops.so/api/v1/contacts/find?email=URI_ENCODED_EMAIL` endpoint.
+
+Be sure to replace `URI_ENCODED_EMAIL` with the email you are looking for. For example, searching your list for `adam@loops.so` would use `https://app.loops.so/api/v1/contacts/find?email=adam%40loops.so`
+
+### Delete
+
+You can remove existing contacts by email or userId using a `DELETE` request to the `https://app.loops.so/api/v1/contacts/delete` endpoint.
+
+Be sure to supply either an email:
+
+```javascript
+{
+    "email": "adam@loops.so"
+}
+```
+
+Or a user id:
+
+```javascript
+{
+    "userId": "someUserId"
+}
+```
+
+## Events
+
+A record of all events fired is available on @The Events Page
+
+### Send
+
+You can send an event to Loops audience by making a `POST` to the `https://app.loops.so/api/v1/events/send` endpoint. You can submit the following object for the body:
+
+```json
+{
+  "email": "adam@loops.so",
+  "eventName": "conversion"
+}
+```
+
+Both fields are required. If no contact with that email address exists, one will be added to your list. You can add additional fields as you need to update the contact attributes, similar to the contact update API.

@@ -1,0 +1,68 @@
+---
+title: "Adding, editing and deleting contact properties"
+---
+
+## Default contact properties
+
+These are the default properties for every contact on Loops. They cannot be deleted.
+
+| Contact Property | Example                 | Merge Tag     |
+| ---------------- | ----------------------- | ------------- |
+| Email            | hi@example.co           | `{email}`     |
+| First Name       | Chris                   | `{firstName}` |
+| Last Name        | Frantz                  | `{lastName}`  |
+| Notes            | Favorite color is blue. | `{notes}`     |
+| Source           | API                     | `{source}`    |
+| Subscribed       | true                    | N/A           |
+| User Group       | Investors               | `{userGroup}` |
+| User Id          | ask523236               | `{userId}`    |
+
+## Custom contact properties
+
+Custom contact properties are additional fields that you can create to store information about contacts. You can create custom contact properties of type `string`, `number`, or `boolean` (Dates coming soon).
+
+## Add a property
+
+**Option 1**
+
+To create a custom contact property visit [your Audience](http://localhost:3000/audience) and click on any of the column headers and select “Add property”:
+![](/images/option-1.png)
+
+**Option 2**
+
+Alternatively, scroll to the end of the Audience table and click the **Plus** button at the end of the column headers.
+
+![](/images/option-2.png)
+
+Note that Loops does not allow properties with the following reserved names:
+
+- `id`
+- `listId`
+- `softDeleteAt`
+- `teamId`
+- `updatedAt`
+
+The same column header menu can be used to delete properties.
+
+<Tip>
+  To edit the name or type of a contact property, please reach out to
+  help@loops.so and we’d be happy to handle that for you.
+</Tip>
+
+### Deleting contact properties
+
+To delete a contact property, visit your [API Settings](http://localhost:3000/settings?page=api) page and click the trashcan icon next to contact property you’d like to delete.
+
+Note that once a contact property is deleted, all associated data will also be deleted and cannot be recovered. It's important to be sure that you won't need the information stored in a property before deleting it.
+
+**Property in use warning**
+
+If you receive a “Property in use” warning modal while deleting a contact property, there are a few things you can check before you’re able to delete the property.
+
+- If the listed email is a Campaign:
+  - Check if the property is in use within a [Merge Tag](/creating-emails/personalizing-emails) inside the email editor
+  - Ensure this property is not being actively used in the Audience filter
+- If the listed email inside a Loop:
+  - Make sure a draft or running Loop is not using it as part of the Audience filter or as a Trigger
+
+![](/images/delete-property.png)
