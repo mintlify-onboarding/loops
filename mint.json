@@ -35,6 +35,10 @@
     {
       "group": "Introduction",
       "pages": ["intro", "start-here"]
+    },
+    {
+      "group": "Account",
+      "pages": ["account/adding-team-member", "account/free-plan"]
     }
   ],
   "footerSocials": {
