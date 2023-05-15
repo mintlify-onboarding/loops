@@ -1,0 +1,44 @@
+{
+  "name": "Loops",
+  "logo": {
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#FC5200",
+    "light": "#FC7432",
+    "dark": "#DD4800"
+  },
+  "topbarCtaButton": {
+    "name": "Login",
+    "url": "https://app.loops.so/"
+  },
+  "topbarLinks": [
+    {
+      "name": "Updates",
+      "url": "https://loops.so/updates"
+    },
+    {
+      "name": "Drops",
+      "url": "https://loops.so/drops"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Contact Us",
+      "icon": "mailbox",
+      "url": "mailto:chris@loops.so"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Introduction",
+      "pages": ["intro", "start-here"]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/sendwithloops",
+    "linkedin": "https://www.linkedin.com/company/sendwithloops/"
+  }
+}
