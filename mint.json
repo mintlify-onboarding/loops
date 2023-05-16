@@ -10,25 +10,27 @@
     "light": "#FC7432",
     "dark": "#DD4800"
   },
-  "topbarCtaButton": {
-    "name": "Login",
-    "url": "https://app.loops.so/"
-  },
   "topbarLinks": [
     {
-      "name": "Updates",
-      "url": "https://loops.so/updates"
-    },
-    {
-      "name": "Drops",
-      "url": "https://loops.so/drops"
+      "name": "Login",
+      "url": "https://app.loops.so/"
     }
   ],
   "anchors": [
     {
       "name": "Contact Us",
-      "icon": "mailbox",
+      "icon": "envelope",
       "url": "mailto:chris@loops.so"
+    },
+    {
+      "name": "Updates",
+      "icon": "list-check",
+      "url": "https://loops.so/updates"
+    },
+    {
+      "name": "Drops",
+      "icon": "box-open",
+      "url": "https://loops.so/drops"
     }
   ],
   "navigation": [
