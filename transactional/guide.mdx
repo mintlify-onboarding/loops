@@ -14,15 +14,28 @@ Unlike Campaigns or Loops, Transactional emails are not promotional in nature an
 
 ### How it works
 
-To send Transactional email, you will need to use our [API](https://www.notion.so/5b453a52dd7c4b419aa4647410de9770) (with more support for third-party integrations coming soon). Requests need to be authenticated using an API key as described [here](https://www.notion.so/5b453a52dd7c4b419aa4647410de9770).
+To send Transactional email, you will need to use our [API](/add-users/api-reference) (with more support for third-party integrations coming soon). Requests need to be authenticated using an API key as described [here](add-users/api-reference).
 
 ### Sending your first transactional email
 
 To get started, click “Create” followed by “Transactional”.
 
-<iframe src="https://res.cloudinary.com/mintlify/video/upload/v1684192725/transactional_f2wntg.mp4">
-  {" "}
-</iframe>
+<div style={{ position: "relative", paddingBottom: "62.5%", height: 0 }}>
+  <iframe
+    src="https://res.cloudinary.com/mintlify/video/upload/v1684192725/transactional_f2wntg.mp4"
+    frameBorder={0}
+    webkitallowfullscreen
+    mozallowfullscreen
+    allowFullScreen
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+  />
+</div>
 
 Then you’ll compose the email you’d like to send in our builder.
 
@@ -32,21 +45,47 @@ In this email, a user clicks the Reset Password button to reset their informatio
 
 The link in the button is filled in by the information in the data variable you send. We’re also sending the user’s name in through a data variable.
 
-<iframe src="https://res.cloudinary.com/mintlify/video/upload/v1684192725/transactional_f2wntg.mp4">
-  {" "}
-</iframe>
+<div style={{ position: "relative", paddingBottom: "62.5%", height: 0 }}>
+  <iframe
+    src="https://res.cloudinary.com/mintlify/video/upload/v1684192725/transactional_f2wntg.mp4"
+    frameBorder={0}
+    webkitallowfullscreen
+    mozallowfullscreen
+    allowFullScreen
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+  />
+</div>
 
 Note that currently you can insert data variables into the text of the email with the “terminal prompt” button:
 
-![](/images/terminal.png)
+<img height="20" src="/images/terminal.png" />
 
 For image links and button links, you will be able to insert data variables with the inline version of the same button.
 
 ![](/images/passwordresetlink.png)
 
-<iframe src="https://res.cloudinary.com/mintlify/video/upload/v1684193741/view-payload_yasybs.mp4">
-  {" "}
-</iframe>
+<div style={{ position: "relative", paddingBottom: "62.5%", height: 0 }}>
+  <iframe
+    src="https://res.cloudinary.com/mintlify/video/upload/v1684193741/view-payload_yasybs.mp4"
+    frameBorder={0}
+    webkitallowfullscreen
+    mozallowfullscreen
+    allowFullScreen
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+  />
+</div>
 
 On the next page, after clicking “Next”, you’ll see the API Details section. This contains the data variables used in the email as well as a sample payload for reference. The “Transactional ID” lets you distinguish between different transactional emails when calling the API and is required.
 
@@ -85,10 +124,10 @@ https://app.loops.so/api/v1/transactional
 
 To edit the email, press “Duplicate as Draft” on the Compose page:
 
-![](/image/duplicate.png)
+![](/images/duplicate.png)
 The previous version of the email will continue sending until you press “Republish” on the Publish page:
 
-![](/image/republish.png)
+![](/images/republish.png)
 That means you can edit Transactional emails while still sending your existing emails.
 
 ### Metrics
