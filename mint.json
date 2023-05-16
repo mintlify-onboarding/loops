@@ -1,4 +1,5 @@
 {
+  "$schema": "https://mintlify.com/schema.json",
   "name": "Loops",
   "logo": {
     "light": "/logo/light.png",
@@ -91,6 +92,9 @@
       "pages": ["events/events-page", "events/auto-bcc"]
     }
   ],
+  "modeToggle": {
+    "default": "light"
+  },
   "footerSocials": {
     "twitter": "https://twitter.com/sendwithloops",
     "linkedin": "https://www.linkedin.com/company/sendwithloops/"
