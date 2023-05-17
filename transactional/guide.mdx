@@ -1,6 +1,6 @@
 ---
-title: "Transactional Email Guide"
-description: "Transactional email support is a newly added feature to help you send infrastructure-level emails from Loops."
+title: 'Transactional Email Guide'
+description: 'Transactional email support is a newly added feature to help you send infrastructure-level emails from Loops.'
 ---
 
 <Tip>
@@ -20,7 +20,7 @@ To send Transactional email, you will need to use our [API](/add-users/api-refer
 
 To get started, click “Create” followed by “Transactional”.
 
-<div style={{ position: "relative", paddingBottom: "62.5%", height: 0 }}>
+<div style={{ position: 'relative', paddingBottom: '62.5%', height: 0 }}>
   <iframe
     src="https://res.cloudinary.com/mintlify/video/upload/v1684192725/transactional_f2wntg.mp4"
     frameBorder={0}
@@ -28,24 +28,24 @@ To get started, click “Create” followed by “Transactional”.
     mozallowfullscreen
     allowFullScreen
     style={{
-      position: "absolute",
+      position: 'absolute',
       top: 0,
       left: 0,
-      width: "100%",
-      height: "100%",
+      width: '100%',
+      height: '100%',
     }}
   />
 </div>
 
-Then you’ll compose the email you’d like to send in our builder.
+Then you'll compose the email you'd like to send in our builder.
 
 ![](/images/email.png)
 
 In this email, a user clicks the Reset Password button to reset their information.
 
-The link in the button is filled in by the information in the data variable you send. We’re also sending the user’s name in through a data variable.
+The link in the button is filled in by the information in the data variable you send. We're also sending the user's name in through a data variable.
 
-<div style={{ position: "relative", paddingBottom: "62.5%", height: 0 }}>
+<div style={{ position: 'relative', paddingBottom: '62.5%', height: 0 }}>
   <iframe
     src="https://res.cloudinary.com/mintlify/video/upload/v1684192725/transactional_f2wntg.mp4"
     frameBorder={0}
@@ -53,11 +53,11 @@ The link in the button is filled in by the information in the data variable you 
     mozallowfullscreen
     allowFullScreen
     style={{
-      position: "absolute",
+      position: 'absolute',
       top: 0,
       left: 0,
-      width: "100%",
-      height: "100%",
+      width: '100%',
+      height: '100%',
     }}
   />
 </div>
@@ -70,7 +70,7 @@ For image links and button links, you will be able to insert data variables with
 
 ![](/images/passwordresetlink.png)
 
-<div style={{ position: "relative", paddingBottom: "62.5%", height: 0 }}>
+<div style={{ position: 'relative', paddingBottom: '62.5%', height: 0 }}>
   <iframe
     src="https://res.cloudinary.com/mintlify/video/upload/v1684193741/view-payload_yasybs.mp4"
     frameBorder={0}
@@ -78,16 +78,16 @@ For image links and button links, you will be able to insert data variables with
     mozallowfullscreen
     allowFullScreen
     style={{
-      position: "absolute",
+      position: 'absolute',
       top: 0,
       left: 0,
-      width: "100%",
-      height: "100%",
+      width: '100%',
+      height: '100%',
     }}
   />
 </div>
 
-On the next page, after clicking “Next”, you’ll see the API Details section. This contains the data variables used in the email as well as a sample payload for reference. The “Transactional ID” lets you distinguish between different transactional emails when calling the API and is required.
+On the next page, after clicking “Next”, you'll see the API Details section. This contains the data variables used in the email as well as a sample payload for reference. The “Transactional ID” lets you distinguish between different transactional emails when calling the API and is required.
 
 ![](/images/next.png)
 
@@ -99,7 +99,7 @@ To enable sending the email, it needs to be published by pressing “Publish”.
 
 In the example above, two Data Variables were used in the email and there is a transactional ID needed as part of our API call. Any data variables created in the email are required when making the API request.
 
-Here’s an example of the request for sending this email:
+Here's an example of the request for sending this email:
 
 **Send a POST to this endpoint (make sure to authenticate)**
 

@@ -1,28 +1,28 @@
 ---
-title: "Setting up a Domain for Sending with Loops"
+title: 'Setting up a Domain for Sending with Loops'
 ---
 
 When you set up your account for the first time, you will want to set up your domain records in order to start sending email.
 
-Loops sends email on your behalf, using our IP’s. That means you get the benefit our shared IP reputation combined with the verified checkmarks in the inbox that shows you’re sending from your domain. Pretty cool right?
+Loops sends email on your behalf, using our IP's. That means you get the benefit our shared IP reputation combined with the verified checkmarks in the inbox that shows you're sending from your domain. Pretty cool right?
 
-Here’s how to set it up in just a few steps.
+Here's how to set it up in just a few steps.
 
 ## Step 1: Navigate to your domain settings page
 
-Here’s a [quick link](https://app.loops.so/settings?page=domain). Click “View Domain Records”
+Here's a [quick link](https://app.loops.so/settings?page=domain). Click “View Domain Records”
 
 ![](/images/domain-records.png)
 
 ## Step 2: Set up your records
 
-On this page, you’ll see a few things.
+On this page, you'll see a few things.
 
 1. **Your records**
    - These are SPF, DKIM and MX records that need to be set up in your domain zone editor inside of your domain registrar like Namecheap, Google Domains, AWS, Godaddy or elsewhere.
    - Next to each record is a tiny functional clipboard icon. You can use this to copy the records to your clipboard and paste them. More on this below!
 2. **Your sending domain**
-   - This is indicated below by “yourcompany.com”. This will have your domain listed. If you’d like to change domains, just contact Adam (adam@loops.so) and we’ll set up new records for you.
+   - This is indicated below by “yourcompany.com”. This will have your domain listed. If you'd like to change domains, just contact Adam (adam@loops.so) and we'll set up new records for you.
 3. **A verify records button**
    - Once you have copied your records to your registrar, click this button to verify they have been set up correctly.
 
@@ -42,32 +42,43 @@ A few things to keep in mind:
   ![](/images/cloudflare.png)
 </Accordion>
 <Accordion title="Namecheap">
-  If you are using the automatic Gmail/Gsuite integration with Namecheap, you will need to remove it then re-add your Gsuite records manually. [Here’s a guide](https://support.google.com/a/answer/33915?hl=en#zippy=%2Cstep-add-new-mx-records%2Cstep-verify-the-change-in-your-google-admin-console) (two steps) on how to complete this action.
-    - If it appears you can only add a single record in the Custom MX options in Namecheap, that’s just poor UI. You can add multiple records.
-    ![](/images/namecheap-1.png)
-    - Your finished records should look similar to this (click to enlarge)
-    ![](/images/namecheap-2.png)
-    ![](/images/namecheap-3.png)
+  If you are using the automatic Gmail/Gsuite integration with Namecheap, you
+  will need to remove it then re-add your Gsuite records manually. [Here's a
+  guide](https://support.google.com/a/answer/33915?hl=en#zippy=%2Cstep-add-new-mx-records%2Cstep-verify-the-change-in-your-google-admin-console)
+  (two steps) on how to complete this action. - If it appears you can only add a
+  single record in the Custom MX options in Namecheap, that's just poor UI. You
+  can add multiple records. ![](/images/namecheap-1.png) - Your finished records
+  should look similar to this (click to enlarge) ![](/images/namecheap-2.png)
+  ![](/images/namecheap-3.png)
 </Accordion>
 <Accordion title="Google Domains">
-  Google Domains (and potentially other providers) combine the mail server and priority inputs into a single line. So if you receive an error like this when setting up the domain, make sure to instead type out the input like this: `10 feedback-smtp.us-east-1.amazonses.com`
-  ![](/images/google-domains.png)
-  - Google domains will also include quotes “ “ around some record names. This is expected and will not impact anything.
+  Google Domains (and potentially other providers) combine the mail server and
+  priority inputs into a single line. So if you receive an error like this when
+  setting up the domain, make sure to instead type out the input like this: `10
+  feedback-smtp.us-east-1.amazonses.com` ![](/images/google-domains.png) -
+  Google domains will also include quotes “ “ around some record names. This is
+  expected and will not impact anything.
 </Accordion>
 
 Last but easy to miss:
 
 <Tip>
-  Make sure you enter the “Priority” while setting up your MX record. In most registrars this is done by formatting it like “10 {pastedrecordname}”. 
-  
-  Occasionally you will be asked to place it on a separate line. Just make sure to read the instructions on the page as you set up your MX record and if you have any questions, just ping adam@loops.so
+  Make sure you enter the “Priority” while setting up your MX record. In most
+  registrars this is done by formatting it like “10 {pastedrecordname}”.
+  Occasionally you will be asked to place it on a separate line. Just make sure
+  to read the instructions on the page as you set up your MX record and if you
+  have any questions, just ping adam@loops.so
 </Tip>
 
 ## Step 4: Verify your records are set up correctly
 
-After you have copied and pasted your records into your domain registrar, you can click “Verify Records” at the bottom of the page to check your server. 
+After you have copied and pasted your records into your domain registrar, you can click “Verify Records” at the bottom of the page to check your server.
 
-<Tip>Sometimes records can take up to an hour to propagate across all the servers. During that time you may see different records validate. This is totally normal, just check back later.</Tip>
+<Tip>
+  Sometimes records can take up to an hour to propagate across all the servers.
+  During that time you may see different records validate. This is totally
+  normal, just check back later.
+</Tip>
 
 If the domain is set up correctly, you should get a screenshot like the one below! If not, check back soon, sometimes records can take up to 20 minutes to propagate.
 
